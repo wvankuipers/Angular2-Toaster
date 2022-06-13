@@ -351,7 +351,7 @@ describe('ToasterContainerComponent with sync ToasterService', () => {
         fixture.detectChanges();
 
         const closeButtonEle = fixture.nativeElement.querySelector('.toast-close-button');
-        expect(closeButtonEle.innerHTML).toBe('');
+        expect(closeButtonEle.innerHTML).toBe('null');
     });
 
     it('addToast will populate safeCloseHtml with default html', () => {
@@ -804,7 +804,7 @@ describe('ToasterContainerComponent when included as a component', () => {
 
         const renderedToast = fixture.nativeElement.querySelector('.toast-message');
         const innerBody = renderedToast.querySelector('div');
-        expect(innerBody.innerHTML).toBe('');
+        expect(innerBody.innerHTML).toBe('null');
     });
 
     it('addToast will render encoded text instead of html if bodyOutputType is Default', () => {
